@@ -1,0 +1,28 @@
+<script>
+
+
+	const customStrings = [
+		elementName="Kexchoklad", elementDescription="Detta är en kexchoklad",
+		elementName="Powerking",elementDescription="Detta är en billig energidricka",
+		elementName="Kong Strong",elementDescription="Detta är Måns favorit",
+		elementName="Redbull",elementDescription="Detta är Macieks favorit" ];
+
+	function showDescription()
+	{
+		alert("Beskrivning: " + document.getElementById("t4").innerHTML);
+	}
+
+
+</script>
+
+<style>
+	p
+	{
+		color: purple;
+	}
+</style>
+
+
+{#each customStrings as text}
+	<p id="t4" on:click={()=>showDescription(this.elementName)}>{text}</p>
+{/each}
